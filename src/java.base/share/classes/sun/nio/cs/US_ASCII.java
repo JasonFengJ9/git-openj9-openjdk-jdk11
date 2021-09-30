@@ -164,9 +164,12 @@ public class US_ASCII
             assert (dp <= dl);
             dp = (dp <= dl ? dp : dl);
 
+/*
+            // Todo: awaiting proper fix from https://github.com/eclipse-openj9/openj9/issues/13600
             int n = JLA.encodeASCII(sa, sp, da, dp, Math.min(sl - sp, dl - dp));
             sp += n;
             dp += n;
+*/
 
             try {
                 if((dl-dp) >= (sl-sp)) {                                             //OpenJ9-perf_converter
